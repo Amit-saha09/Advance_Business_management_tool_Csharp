@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83DFFDB6-92E5-4C77-B262-18AB9D004A2D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>INVENTORY</RootNamespace>
+    <AssemblyName>INVENTORY</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business layer\Categories.cs" />
+    <Compile Include="Business layer\Customers.cs" />
+    <Compile Include="Business layer\Employees.cs" />
+    <Compile Include="Business layer\EntityDataAccess\Categorydataaccess.cs" />
+    <Compile Include="Business layer\EntityDataAccess\Customerdataaccess.cs" />
+    <Compile Include="Business layer\EntityDataAccess\Employeedataaccess.cs" />
+    <Compile Include="Business layer\EntityDataAccess\Productdataaccess.cs" />
+    <Compile Include="Business layer\EntityDataAccess\Saledataaccess.cs" />
+    <Compile Include="Business layer\EntityDataAccess\Supplierdataaccess.cs" />
+    <Compile Include="Business layer\EntityDataAccess\Userdataaccess.cs" />
+    <Compile Include="Business layer\Products.cs" />
+    <Compile Include="Business layer\Sales.cs" />
+    <Compile Include="Business layer\Suppliers.cs" />
+    <Compile Include="Business layer\Users.cs" />
+    <Compile Include="Dataaccess layer\DataAccess.cs" />
+    <Compile Include="Presentation layer\Addcustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Addcustomer.Designer.cs">
+      <DependentUpon>Addcustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Addemployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Addemployee.Designer.cs">
+      <DependentUpon>Addemployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Addproduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Addproduct.Designer.cs">
+      <DependentUpon>Addproduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Adduser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Adduser.Designer.cs">
+      <DependentUpon>Adduser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\CategoryAddform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\CategoryAddform.Designer.cs">
+      <DependentUpon>CategoryAddform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Editcategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Editcategory.Designer.cs">
+      <DependentUpon>Editcategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Editemployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Editemployee.Designer.cs">
+      <DependentUpon>Editemployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Editproduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Editproduct.Designer.cs">
+      <DependentUpon>Editproduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\EditSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\EditSupplier.Designer.cs">
+      <DependentUpon>EditSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Homepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Homepage.Designer.cs">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Suplieraddform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Suplieraddform.Designer.cs">
+      <DependentUpon>Suplieraddform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Category.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Categoryinfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Categoryinfo.Designer.cs">
+      <DependentUpon>Categoryinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Editcustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Editcustomer.Designer.cs">
+      <DependentUpon>Editcustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Editprofile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Editprofile.Designer.cs">
+      <DependentUpon>Editprofile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Ownercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Ownercontrol.Designer.cs">
+      <DependentUpon>Ownercontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Supliercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\User controlls\Supliercontrol.Designer.cs">
+      <DependentUpon>Supliercontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation layer\Addcustomer.resx">
+      <DependentUpon>Addcustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Addemployee.resx">
+      <DependentUpon>Addemployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Addproduct.resx">
+      <DependentUpon>Addproduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Adduser.resx">
+      <DependentUpon>Adduser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\CategoryAddform.resx">
+      <DependentUpon>CategoryAddform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Editcategory.resx">
+      <DependentUpon>Editcategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Editemployee.resx">
+      <DependentUpon>Editemployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Editproduct.resx">
+      <DependentUpon>Editproduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\EditSupplier.resx">
+      <DependentUpon>EditSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Homepage.resx">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Suplieraddform.resx">
+      <DependentUpon>Suplieraddform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\User controlls\Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\User controlls\Categoryinfo.resx">
+      <DependentUpon>Categoryinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\User controlls\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Editcustomer.resx">
+      <DependentUpon>Editcustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\User controlls\Editprofile.resx">
+      <DependentUpon>Editprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\User controlls\Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\User controlls\Ownercontrol.resx">
+      <DependentUpon>Ownercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\User controlls\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\User controlls\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\User controlls\Supliercontrol.resx">
+      <DependentUpon>Supliercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
